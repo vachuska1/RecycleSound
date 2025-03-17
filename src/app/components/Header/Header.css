@@ -1,0 +1,77 @@
+.header {
+    position: fixed;
+    top: 20px;
+    left: 20%;
+    right: 20%;
+    background: linear-gradient(90deg, #007f73, #009687, #00ae9d, #0dc6b1, #26d6bc, #26d6bc, #0dc6b1, #00ae9d, #009687, #007f73);
+    padding: 25px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 25px;
+    text-shadow:  
+    -1px -1px 0 black,  
+     1px -1px 0 black,  
+    -1px  1px 0 black,  
+     1px  1px 0 black; /* Černý obrys kolem textu */
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav ul {
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    font-weight: bold;
+    gap: 32px;
+    text-shadow:  
+    -1px -1px 0 black,  
+     1px -1px 0 black,  
+    -1px  1px 0 black,  
+     1px  1px 0 black; /* Černý obrys kolem textu */
+  }
+  
+  .nav li {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .nav li:hover {
+    color: #007f73;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+      left: 20px;
+      right: 20px;
+    }
+    .container {
+      flex-direction: column;
+    }
+    .logo {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .nav ul {
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+  
