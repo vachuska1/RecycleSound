@@ -1,147 +1,174 @@
-/* Import písma "Inter" pro moderní vzhled */
+/* Import písma */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-/* Import písma "Roboto" pro záložní písmo */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 .footer {
+  margin-top: 50vh;
   font-family: 'Inter', sans-serif;
-  margin-top: 80vh;
-    background-color: #1d4844;
-    color: white;
-    padding: 40px 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px;
-  }
-  
-  /* Kontakt */
-  .contact {
-    max-width: 350px;
+  background: linear-gradient(90deg, #007f73, #009687, #00ae9d, #0dc6b1, #26d6bc, #26d6bc, #0dc6b1, #00ae9d, #009687, #007f73);
+  color: white;
+  padding: 60px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Zarovnání na střed */
+  gap: 50px;
+}
+
+/* Kontakt - zarovnaný na střed */
+.contact {
   display: flex;
   flex-direction: column;
-  padding: auto 0;
   justify-content: center; /* Vertikální centrování */
-  }
-  
-  .contact h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  
-  .contact p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  .contact a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .contact a:hover {
-    color: #ffdf00;
-  }
-  
-  /* Formulář */
-  .formContainer {
-    flex: 1;
-    max-width: 400px;
-  }
-  
-  .form h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  .form {
-    display: flex;
+  align-items: flex-start;
+  max-width: 350px;
+}
+
+.contact h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contact p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact a:hover {
+  color: #1d1d1c;
+}
+
+/* Formulář */
+.formContainer {
+  flex: 1;
+  max-width: 400px;
+}
+
+.form h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.form input {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.form textarea {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  width: 16px;
+  height: 16px;
+}
+
+.checkboxLabel a {
+  color: #27f4ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.checkboxLabel a:hover {
+  text-decoration: underline;
+}
+
+.form button {
+  padding: 12px;
+  background: linear-gradient(90deg, #ffffff, #fff4f0);
+  color: rgb(24, 24, 24);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form button:hover {
+  background: linear-gradient(90deg, #ffe1d7, #ffffff);
+  transform: scale(1.05);
+}
+
+/* RESPONSIVITA */
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 30px;
   }
-  
+
+  .contact {
+    align-items: center;
+    text-align: center;
+    text-shadow:  
+    -1px -1px 0 black,  
+     1px -1px 0 black,  
+    -1px  1px 0 black,  
+     1px  1px 0 black;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+
   .form input,
   .form textarea {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-    transition: all 0.3s ease-in-out;
+    font-size: 14px;
   }
-  
-  .form input {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-  }
-  
-  .form textarea {
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    resize: none;
-  }
-  
-  .form input::placeholder,
-  .form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
+
   .form button {
-    padding: 12px;
-    background: linear-gradient(90deg, #ffffff, #fff4f0);
-    color: rgb(24, 24, 24);
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    font-size: 14px;
   }
-  
-  .form button:hover {
-    background: linear-gradient(90deg, #ffe1d7, #ffffff);
-    transform: scale(1.05);
-  }
-  
-  /* RESPONSIVITA */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 30px;
-    }
-  
-    .contact {
-      max-width: none;
-    }
-  
-    .formContainer {
-      max-width: none;
-      width: 100%;
-    }
-  
-    .form input,
-    .form textarea {
-      font-size: 14px;
-    }
-  
-    .form button {
-      font-size: 14px;
-    }
-  }
-  
+}

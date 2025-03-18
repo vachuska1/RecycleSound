@@ -1,0 +1,23 @@
+  /* src/components/Obec/Obec.module.css */
+  .emptySection {
+    height: 150px;  /* Nastaví výšku sekce na 150px */
+    background-color: transparent;  /* Prázdná sekce, bez pozadí */
+  }
+  
+
+
+/* src/components/Firma/Firma.module.css */
+.firmaSection {
+    padding-top: 150px;  /* Zajistíme, že každá sekce bude mít 150px mezery nahoře (zohlední fixní záložku) */
+    margin-top: -150px;  /* Tímto zajistíme, že sekce bude stále umístěna správně */
+  }
+  
+  .firmaSection h2 {
+    color: #007f73; /* Barva nadpisu */
+  }
+  
+  .firmaSection p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  

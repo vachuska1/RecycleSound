@@ -1,0 +1,39 @@
+  /* src/components/Obec/Obec.module.css */
+  .emptySection {
+    height: 150px;  /* Nastaví výšku sekce na 150px */
+    background-color: transparent;  /* Prázdná sekce, bez pozadí */
+  }
+  
+
+/* Třída pro animaci */
+.gifContainer {
+    display: flex;
+    justify-content: center; /* Zarovná GIF na střed */
+    align-items: center; /* Umožní vertikální zarovnání, pokud bude potřeba */
+    width: 100%; /* Nastaví šířku kontejneru na 100% */
+    margin-bottom: 30px; /* Přidá prostor pod GIFem */
+  }
+  
+  .gif {
+    width: 100%; /* Nastaví šířku GIFu na 100% (aby zabral celou šířku rodičovského kontejneru) */
+    height: auto; /* Umožní automatickou úpravu výšky, aby si GIF zachoval poměr stran */
+  }
+
+
+
+/* src/components/Obec/Obec.module.css */
+.obecSection {
+    padding-top: 150px;  /* Zajistíme, že každá sekce bude mít 150px mezery nahoře (zohlední fixní záložku) */
+    margin-top: -150px;  /* Tímto zajistíme, že sekce bude stále umístěna správně */
+  }
+  
+  /* Ostatní stylování */
+  .obecSection h2 {
+    color: #007f73;
+  }
+  
+  .obecSection p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+

@@ -14,3 +14,7 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+/* Přidání plynulého scrollování pro celou stránku */
+html {
+  scroll-behavior: smooth;  /* Plynulý přechod při scrollování */
+}

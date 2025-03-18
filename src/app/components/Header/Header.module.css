@@ -12,6 +12,12 @@
     z-index: 1000;
   }
   
+
+
+
+
+
+
   .container {
     width: 100%;
     display: flex;
@@ -43,16 +49,31 @@
      1px  1px 0 black; /* Černý obrys kolem textu */
   }
   
-  .nav li {
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-  }
-  
-  .nav li:hover {
-    color: #007f73;
-  }
+/* Styl pro aktivní položku */
+.nav li a.activeMenuItem {
+  color: #007f73 !important; /* Zvýraznění aktivní položky červenou barvou */
+  font-weight: bold; /* Tučné písmo pro aktivní položku */
+}
+
+/* Výchozí styl pro 'a' tag */
+.nav li a {
+  color: rgb(255, 255, 255); /* Výchozí barva písma */
+  text-decoration: none; /* Bez podtržení */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover efekt pro 'a' tag */
+.nav li a:hover {
+  color: #007f73; /* Změna barvy při hoveru */
+}
+
+/* Styl pro 'li' tag */
+.nav li {
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
   
   @media (max-width: 768px) {
     .header {
