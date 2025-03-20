@@ -7,13 +7,18 @@ const Obec: React.FC = () => {
       {/* Přidání prázdné sekce pro zajištění 150px mezery nahoře */}
       <div className={styles.emptySection}></div>
 
-      {/* Přidání GIFu pod prázdnou sekci */}
-      <div className={styles.gifContainer}>
-        <img 
-          src="/images/Animate2.gif" 
-          alt="Animace"
-          className={styles.gif} 
-        />
+      {/* Přidání MP4 videa pod prázdnou sekci */}
+      <div className={styles.videoContainer}>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={styles.video}
+        >
+          <source src="/images/Animate.mp4" type="video/mp4" />
+          Váš prohlížeč nepodporuje video tag.
+        </video>
       </div>
 
       <section className={styles.obecSection}>
