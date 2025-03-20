@@ -4,10 +4,13 @@ import styles from "./Obec.module.css"; // Importuj CSS soubor
 const Obec: React.FC = () => {
   return (
     <div>
-            {/* Přidání GIFu pod prázdnou sekci */}
+      {/* Přidání prázdné sekce pro zajištění 150px mezery nahoře */}
+      <div className={styles.emptySection}></div>
+
+      {/* Přidání GIFu pod prázdnou sekci */}
       <div className={styles.gifContainer}>
         <img 
-          src="/images/Animate.gif" 
+          src="/images/Animate2.gif" 
           alt="Animace"
           className={styles.gif} 
         />

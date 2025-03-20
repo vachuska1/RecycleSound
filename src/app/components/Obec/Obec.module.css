@@ -1,7 +1,7 @@
   /* src/components/Obec/Obec.module.css */
   .emptySection {
     height: 150px;  /* Nastaví výšku sekce na 150px */
-    background-color: transparent;  /* Prázdná sekce, bez pozadí */
+    background-color: #5efff5;  /* Prázdná sekce, bez pozadí */
   }
   
 
