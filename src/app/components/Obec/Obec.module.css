@@ -1,51 +1,54 @@
-/* src/components/Obec/Obec.module.css */
 .emptySection {
-    height: 0;  /* Nastaví výšku sekce na 150px */
-    background-color: #5efff5;  /* Prázdná sekce, bez pozadí */
+    height: 150px; /* Zajištění mezery nahoře */
+    background-color: transparent;
   }
   
-  /* Třída pro video kontejner */
-  .videoContainer {
+  /* Kontejner pro obrázky */
+  .imageContainer {
     display: flex;
-    justify-content: center; /* Zarovná video na střed */
-    align-items: center; /* Umožní vertikální zarovnání, pokud bude potřeba */
-    width: 100%; /* Nastaví šířku kontejneru na 100% */
-    margin-bottom: 30px; /* Přidá prostor pod videem */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
-  /* Třída pro video */
-  .video {
-    width: 100%; /* Nastaví šířku videa na 100% (aby zabralo celou šířku rodičovského kontejneru) */
-    height: auto; /* Umožní automatickou úpravu výšky, aby si video zachovalo poměr stran */
-    max-width: 100%; /* Zajistí, že video nepřesáhne šířku obrazovky */
+  /* Obrázek */
+  .image {
+    width: 100%; /* Obrázek zabere celou šířku rodičovského kontejneru */
+    height: auto;
+    max-width: 100%;
   }
   
-  /* Responzivní úpravy pro malé obrazovky */
-  @media (max-width: 768px) {
-    .emptySection {
-        height: 150px;  /* Nastaví výšku sekce na 150px */
-        background-color: #ffffff;  /* Prázdná sekce, bez pozadí */
-      }
-    /* Pokud je šířka obrazovky menší než 768px, můžeme omezit šířku videa */
-    .video {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-    
-  /* src/components/Obec/Obec.module.css */
+  /* Sekce */
   .obecSection {
-    padding-top: 150px;  /* Zajistíme, že každá sekce bude mít 150px mezery nahoře (zohlední fixní záložku) */
-    margin-top: -150px;  /* Tímto zajistíme, že sekce bude stále umístěna správně */
+    padding-top: 150px;
+    margin-top: -150px;
+    text-align: center;
   }
   
-  /* Ostatní stylování */
+  /* Nadpisy a text */
   .obecSection h2 {
     color: #007f73;
+    font-size: 2rem;
   }
   
   .obecSection p {
     font-size: 1.2rem;
     color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Responzivní úpravy pro menší obrazovky */
+  @media (max-width: 768px) {
+    .emptySection {
+      height: 100px;
+    }  
+    .obecSection h2 {
+      font-size: 1.8rem;
+    }
+  
+    .obecSection p {
+      font-size: 1rem;
+    }
   }
   
