@@ -1,37 +1,34 @@
 import React from "react";
-import styles from "./Obec.module.css"; // Importuj CSS soubor
+import { motion } from "framer-motion";
+import styles from "./Obec.module.css";
+import KontejnerList from "./KontejnerList/KontejnerList";
 
 const Obec: React.FC = () => {
   return (
     <div>
-      {/* Přidání prázdné sekce pro zajištění 150px mezery nahoře */}
-      <div className={styles.emptySection}></div>
+      {/* Slogan */}
+      <motion.h1 
+        className={styles.slogan}
+        initial={{ opacity: 0, y: -150 }}
+        animate={{ opacity: 1, y: 0 }}  
+        transition={{ duration: 1 }}
+      >
+        Udržitelná budoucnost díky modernímu vzdělávání o třídění a snižování množství odpadu
+      </motion.h1>
 
-      {/* První obrázek */}
+      {/* Obrázky */}
       <div className={styles.imageContainer}>
-        <img 
-          src="/images/Animate.png" 
-          alt="Animace 1" 
-          className={styles.image} 
-        />
-      </div>
-
-      {/* Druhý obrázek */}
-      <div className={styles.imageContainer}>
-        <img 
+        <motion.img 
           src="/images/Animate2.png" 
           alt="Animace 2" 
           className={styles.image} 
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
         />
       </div>
 
-      <section className={styles.obecSection}>
-        <h2>Obec</h2>
-        <p>
-          Tato sekce obsahuje informace pro obce. Může zde být popis služeb,
-          nástrojů nebo informací zaměřených na potřeby obcí.
-        </p>
-      </section>
+      <KontejnerList />
     </div>
   );
 };

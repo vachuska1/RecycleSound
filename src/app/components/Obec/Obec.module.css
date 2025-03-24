@@ -1,54 +1,30 @@
-.emptySection {
-    height: 150px; /* Zajištění mezery nahoře */
-    background-color: transparent;
-  }
+/* Slogan - přidání margin-top pro 200px mezeru od horního okraje */
+.slogan {
+    margin-top: 200px; /* Začíná 200px pod horním okrajem */
+    text-align: center; /* Přizpůsobení textu na střed */
+    font-size: 2rem; /* Velikost písma (můžeš přizpůsobit podle potřeby) */
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: rgb(10, 187, 25); /* Barva textu */
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black; /* Pravidelný černý obrys textu */
+    padding: 20px;
+}
+
   
-  /* Kontejner pro obrázky */
+  /* Kontejner pro obrázek */
   .imageContainer {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    overflow: hidden;
+    margin: 100px 0;
   }
   
   /* Obrázek */
   .image {
-    width: 100%; /* Obrázek zabere celou šířku rodičovského kontejneru */
+    width: 100%;  /* Zajistí, že obrázek se přizpůsobí šířce kontejneru */
     height: auto;
-    max-width: 100%;
-  }
-  
-  /* Sekce */
-  .obecSection {
-    padding-top: 150px;
-    margin-top: -150px;
-    text-align: center;
-  }
-  
-  /* Nadpisy a text */
-  .obecSection h2 {
-    color: #007f73;
-    font-size: 2rem;
-  }
-  
-  .obecSection p {
-    font-size: 1.2rem;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Responzivní úpravy pro menší obrazovky */
-  @media (max-width: 768px) {
-    .emptySection {
-      height: 100px;
-    }  
-    .obecSection h2 {
-      font-size: 1.8rem;
-    }
-  
-    .obecSection p {
-      font-size: 1rem;
-    }
+    object-fit: cover;
   }
   

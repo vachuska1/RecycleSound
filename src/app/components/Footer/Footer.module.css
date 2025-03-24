@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 .footer {
-  margin-top: 50vh;
   font-family: 'Inter', sans-serif;
   background: linear-gradient(90deg, #007f73, #009687, #00ae9d, #0dc6b1, #26d6bc, #26d6bc, #0dc6b1, #00ae9d, #009687, #007f73);
   color: white;
