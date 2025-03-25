@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./Obec.module.css";
 import KontejnerList from "./KontejnerList/KontejnerList";
+import HlasicList from "./HlasicList/HlasicList";
 
 const Obec: React.FC = () => {
   return (
@@ -27,8 +28,8 @@ const Obec: React.FC = () => {
           transition={{ duration: 1, delay: 0.5 }}
         />
       </div>
-
       <KontejnerList />
+      <HlasicList />
     </div>
   );
 };
