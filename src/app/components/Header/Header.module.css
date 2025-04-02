@@ -1,98 +1,111 @@
 .header {
-    position: fixed;
-    top: 20px;
-    left: 20%;
-    right: 20%;
-    background: linear-gradient(90deg, #007f73, #009687, #00ae9d, #0dc6b1, #26d6bc, #26d6bc, #0dc6b1, #00ae9d, #009687, #007f73);
-    padding: 25px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-
-
-
-
-
-
-  .container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 25px;
-    text-shadow:  
-    -1px -1px 0 black,  
-     1px -1px 0 black,  
-    -1px  1px 0 black,  
-     1px  1px 0 black; /* Černý obrys kolem textu */
-    font-weight: bold;
-    color: white;
-  }
-  
-  .nav ul {
-    list-style: none;
-    text-transform: uppercase;
-    display: flex;
-    font-weight: bold;
-    gap: 32px;
-    text-shadow:  
-    -1px -1px 0 black,  
-     1px -1px 0 black,  
-    -1px  1px 0 black,  
-     1px  1px 0 black; /* Černý obrys kolem textu */
-  }
-  
-/* Styl pro aktivní položku */
-.nav li a.activeMenuItem {
-  color: #007f73 !important; /* Zvýraznění aktivní položky červenou barvou */
-  font-weight: bold; /* Tučné písmo pro aktivní položku */
+  position: fixed;
+  top: 20px;
+  left: 20%;
+  right: 20%;
+  background: linear-gradient(90deg, #007f73, #009687, #00ae9d, #0dc6b1, #26d6bc, #26d6bc, #0dc6b1, #00ae9d, #009687, #007f73);
+  padding: 25px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
-/* Výchozí styl pro 'a' tag */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Přidáno pro lepší rozložení */
+}
+
+.logo {
+  font-size: 25px;
+  text-shadow:  
+    -1px -1px 0 black,  
+    1px -1px 0 black,  
+    -1px 1px 0 black,  
+    1px 1px 0 black;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap; /* Zabrání zalomení textu */
+}
+
+.nav ul {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  font-weight: bold;
+  gap: 32px;
+  text-shadow:  
+    -1px -1px 0 black,  
+    1px -1px 0 black,  
+    -1px 1px 0 black,  
+    1px 1px 0 black;
+  margin: 0;
+  padding: 0;
+}
+
 .nav li a {
-  color: rgb(255, 255, 255); /* Výchozí barva písma */
-  text-decoration: none; /* Bez podtržení */
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav li a:hover {
+  color: #007f73;
+}
+
+.nav li a.activeMenuItem {
+  color: #007f73 !important;
+  font-weight: bold;
+}
+/* ... (zachovejte váš existující styl) ... */
+
+.nav button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
-/* Hover efekt pro 'a' tag */
-.nav li a:hover {
-  color: #007f73; /* Změna barvy při hoveru */
+.nav button:hover {
+  color: #007f73;
 }
 
-/* Styl pro 'li' tag */
-.nav li {
-  font-size: 15px;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+.nav button.activeMenuItem {
+  color: #007f73 !important;
+  font-weight: bold;
 }
-
-  
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      text-align: center;
-      padding: 10px;
-      left: 20px;
-      right: 20px;
-    }
-    .container {
-      flex-direction: column;
-    }
-    .logo {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-    .nav ul {
-      flex-direction: row;
-      gap: 60px;
-    }
+/* Zůstává stejné */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    left: 20px;
+    right: 20px;
   }
-  
+  .container {
+    flex-direction: column;
+  }
+  .logo {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .nav ul {
+    flex-direction: row;
+    gap: 60px;
+  }
+}

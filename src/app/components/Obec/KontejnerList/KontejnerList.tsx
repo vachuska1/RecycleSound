@@ -16,26 +16,18 @@ const KontejnerList: React.FC = () => {
   };
 
   return (
-    <div>
-      {/* Text s animací */}
-      <motion.section
-        className={styles.carouselText}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <motion.h2
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          Nabízíme tyto druhy kontejnerů
-        </motion.h2>
-      </motion.section>
+    <div className={styles.contentWrapper}>
+      {/* Nadpis a podnadpis - základní zobrazení bez animací */}
+      <div className={styles.textContent}>
+        <h2 className={styles.mainTitle}>Chytré kontejnery</h2>
+        <p className={styles.subtitle}>
+          Snížení nákladů, zvýšení efektivity a motivace k lepšímu třídění
+        </p>
+      </div>
 
-      {/* Slider s obrázky */}
+      {/* Slider s obrázky - zachováno původní chování */}
       <div className={styles.carouselContainer}>
-        <Slider {...settings}>
+      <Slider {...settings}>
           <div>
             <motion.img
               src="/images/bio.webp"
@@ -88,6 +80,21 @@ const KontejnerList: React.FC = () => {
           </div>
         </Slider>
       </div>
+
+      {/* Seznam výhod - statický obsah */}
+      <ul className={styles.featureList}>
+        <li>Automatické vážení – váží přesné množství odpadu</li>
+        <li>Chytré hlášení – samy žádají o vývoz, když jsou plné</li>
+        <li>Transparentní evidence – evidují odpady konkrétních původců</li>
+        <li>Spravedlivé platby – platíte jen za skutečně vyprodukovaný odpad</li>
+        <li>Motivace k třídění – bonusové programy a odměny</li>
+        <li>Zábavná osvěta – interaktivní hlásiče pro efektivní třídění</li>
+      </ul>
+
+      {/* Závěrečný text */}
+      <p className={styles.subtitle}>
+        Chytré kontejnery – revoluční řešení pro nakládání s odpady pro moderní obce a firmy
+      </p>
     </div>
   );
 };

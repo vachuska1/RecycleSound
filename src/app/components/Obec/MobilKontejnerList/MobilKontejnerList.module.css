@@ -1,0 +1,117 @@
+/* MobilKontejnerList.module.css */
+
+/* Kontejner pro celý carousel */
+.carouselContainer {
+    width: 100%;
+    max-width: 100%;
+    margin: 100px auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Styl obrázků ve slideru - upraveno pro mobilní kontejnery */
+  .kontejnerImage {
+    width: 50%; /* Větší šířka pro lepší viditelnost mobilních kontejnerů */
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px; /* Mírně větší zaoblení */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Přidán stín pro lepší vizuál */
+  }
+  
+  /* Skrytí šipek ve slideru - zachováno původní */
+  .slick-prev, .slick-next {
+    display: block !important;
+    background-color: transparent;
+    color: #fff;
+    font-size: 24px;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+  /* Animace pro plynulý přechod mezi snímky */
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Umožní, že se obrázky budou zobrazovat v horizontální řadě */
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px; /* Přidáno pro lepší rozestup */
+  }
+  
+  .slick-slide img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Text nad carouselem - upraveno pro mobilní kontejnery */
+  .carouselText {
+    text-align: center;
+    font-size: 1.3rem; /* Mírně větší písmo */
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: #0abb19; /* Barva textu - zelená */
+    text-shadow: 
+      1px 1px 2px black, 
+      -1px -1px 2px black, 
+      1px -1px 2px black, 
+      -1px 1px 2px black;
+    padding: 25px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.1); /* Jemný podklad pro lepší čitelnost */
+    border-radius: 10px;
+  }
+  
+  /* Speciální třída pro popisky mobilních kontejnerů */
+  .mobilniDescription {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Media query pro responzivitu */
+  @media (max-width: 768px) {
+    .kontejnerImage {
+      width: 85%; /* Na mobilech téměř celá šířka */
+      border-radius: 10px; /* Menší zaoblení */
+    }
+    
+    .carouselText {
+      font-size: 1.1rem;
+      padding: 15px;
+    }
+    
+    .slick-slide {
+      padding: 0 5px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .kontejnerImage {
+      width: 40%; /* Na velkých obrazovkách menší šířka */
+    }
+  }
+  
+  /* Efekt při najetí myší */
+  @media (hover: hover) {
+    .kontejnerImage:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease;
+    }
+  }

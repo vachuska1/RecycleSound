@@ -1,35 +1,43 @@
 "use client";
 
 import React from "react";
-import Link from "next/link"; // Importujeme Link z next/router
-import styles from "./Header.module.css"; // Importujeme CSS modul
+import styles from "./Header.module.css";
 
-interface HeaderProps {
-  setActiveSection: (section: string) => void; // Definujeme typ pro prop
-  activeSection: string; // Přidáme activeSection pro sledování aktivní sekce
-}
+const Header: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 100; // Přizpůsobte výšce vašeho headeru
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
-const Header: React.FC<HeaderProps> = ({ setActiveSection, activeSection }) => {
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <h1 className={styles.logo}>RECYCLESOUND</h1>
         <nav className={styles.nav}>
           <ul>
-            <li onClick={() => setActiveSection("Obec")}>
-              <Link href="/#obec" className={activeSection === "Obec" ? styles.activeMenuItem : ""}>
-                Obec
-              </Link>
+            <li>
+              <button onClick={() => scrollToSection("chytré-kontejnery")}>
+                Chytré kontejnery
+              </button>
             </li>
-            <li onClick={() => setActiveSection("Obcan")}>
-              <Link href="/#obcan" className={activeSection === "Obcan" ? styles.activeMenuItem : ""}>
-                Občan
-              </Link>
+            <li>
+              <button onClick={() => scrollToSection("mobilní-kontejnery")}>
+                Mobilní kontejnery
+              </button>
             </li>
-            <li onClick={() => setActiveSection("Firma")}>
-              <Link href="/#firma" className={activeSection === "Firma" ? styles.activeMenuItem : ""}>
-                Firma
-              </Link>
+            <li>
+              <button onClick={() => scrollToSection("hlásiče")}>
+                Hlásiče
+              </button>
             </li>
           </ul>
         </nav>
@@ -39,4 +47,3 @@ const Header: React.FC<HeaderProps> = ({ setActiveSection, activeSection }) => {
 };
 
 export default Header;
-
