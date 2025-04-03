@@ -1,74 +1,135 @@
+/* Moderní a responzivní styly */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Kontejner pro celý carousel */
 .carouselContainer {
-    width: 100%;
-    max-width: 100%;
-    margin: 100px auto;
-    overflow: hidden;
-    position: relative;
+  font-family: Poppins, sans-serif;
+  width: 100%;
+  max-width: 100%;
+  margin: 50px auto;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Styl obrázků ve slideru */
 .hlasicImage {
-    width: 30%; /* Na menších zařízeních bude obrázek zabírat 30% šířky */
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 0 auto;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
-/* Skrytí šipek ve slideru */
+/* Hlavní obsah */
+.contentWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.textContent {
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #007f73;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+.featureList li {
+  padding: 12px 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.featureList li::before {
+  content: "✅";
+  margin-right: 10px;
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  .featureList {
+    padding: 0 20px;
+  }
+  .hlasicImage {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .featureList li {
+    font-size: 1.1rem;
+  }
+}
+
+/* Slider styly */
 .slick-prev, .slick-next {
-    display: block !important;
-    background-color: transparent;
-    color: #fff;
-    font-size: 24px;
-    z-index: 10;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  display: block !important;
+  background-color: transparent;
+  color: #fff;
+  font-size: 24px;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .slick-prev {
-    left: 10px;
+  left: 10px;
 }
 
 .slick-next {
-    right: 10px;
+  right: 10px;
 }
 
-/* Animace pro plynulý přechod mezi snímky */
 .slick-track {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-/* Umožní, že se obrázky budou zobrazovat v horizontální řadě */
 .slick-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slick-slide img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* Media query pro větší obrazovky (od 768px) */
-@media (max-width: 768px) {
-    .hlasicImage {
-        width: 80%; /* Na větších zařízeních bude obrázek zabírat 80% šířky */
-    }
-}
-
-/* Nadpis nad sliderem */
-.carouselText {
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    text-transform: uppercase;
-    color: rgb(10, 187, 25);
-    text-shadow: 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
-    padding: 20px;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }

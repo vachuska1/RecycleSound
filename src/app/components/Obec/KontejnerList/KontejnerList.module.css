@@ -1,5 +1,8 @@
+/* Moderní a responzivní styly */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 /* Zachováváme původní styly pro carousel */
 .carouselContainer {
+  font-family: Poppins, sans-serif;
   width: 100%;
   max-width: 100%;
   margin: 50px auto;
@@ -8,93 +11,99 @@
 }
 
 .kontejnerImage {
-  width: 30%;
+  width: 50%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
   margin: 0 auto;
 }
 
-/* Nové styly pro textový obsah */
+/* Hlavní obsah */
 .contentWrapper {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
+  text-align: center;
 }
 
 .textContent {
-  text-align: center;
   margin-bottom: 40px;
 }
 
 .mainTitle {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
   color: #007f73;
   margin-bottom: 15px;
 }
 
 .subtitle {
-  font-size: 1.4rem;
-  color: #333;
-  max-width: 800px;
+  font-size: 1.5rem;
+  color: #444;
+  max-width: 700px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 .featureList {
   list-style: none;
   padding: 0;
   margin: 40px auto;
-  max-width: 800px;
+  max-width: 700px;
+  text-align: left;
 }
 
 .featureList li {
-  padding: 10px 0;
-  font-size: 1.1rem;
+  padding: 12px 0;
+  font-size: 1.2rem;
   line-height: 1.6;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.featureList li::before {
+  content: "✔";
+  color: #007f73;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .conclusion {
   font-size: 1.3rem;
-  text-align: center;
-  color: #007f73;
   font-weight: 500;
   margin: 40px auto;
-  max-width: 800px;
+  color: #007f73;
+  max-width: 700px;
+  text-align: center;
 }
 
 /* Responzivita */
 @media (max-width: 768px) {
-  .kontejnerImage {
-    width: 80%;
-  }
-  
   .mainTitle {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
-  
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
-  
   .featureList {
     padding: 0 20px;
+  }
+  .kontejnerImage {
+    width: 80%;
   }
 }
 
 @media (max-width: 480px) {
   .mainTitle {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
-  
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
-  
   .featureList li {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-  
   .conclusion {
     font-size: 1.1rem;
   }

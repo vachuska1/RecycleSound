@@ -14,7 +14,7 @@ const Obec: React.FC = () => {
       <motion.h1 
         className={styles.slogan}
         initial={{ opacity: 0, y: -150 }}
-        animate={{ opacity: 1, y: 100 }}  
+        animate={{ opacity: 1, y: 0 }}  
         transition={{ duration: 1 }}
       >
         Udržitelná budoucnost díky modernímu vzdělávání o třídění a snižování množství odpadu
@@ -58,7 +58,6 @@ const Obec: React.FC = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Mobilní kontejnery
           </motion.h2>
           <MobilKontejneryList />
         </section>
@@ -73,7 +72,6 @@ const Obec: React.FC = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Hlásiče
           </motion.h2>
           <HlasicList />
         </section>

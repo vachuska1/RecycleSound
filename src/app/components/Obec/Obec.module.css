@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+  padding-top: 150px; /* Odsazení odshora */
 }
 
 /* Omezení šířky obsahu */
@@ -17,11 +18,13 @@
 /* Slogan */
 .slogan {
   text-align: center;
-  margin: 50px auto;
+  margin: 0 auto;
   padding: 0 20px;
   max-width: 800px;
-  font-size: 2rem;
-  line-height: 1.3;
+  font-size: 2.2rem; /* Zvýšení velikosti písma pro lepší čitelnost */
+  line-height: 1.4; /* Vylepšení řádkování pro lepší vzhled */
+  font-weight: 600; /* Tučnější písmo pro lepší důraz */
+  color: #007f73; /* Změna barvy pro vylepšení vzhledu */
 }
 
 /* Obrázek */
@@ -35,6 +38,7 @@
 .mainImage {
   max-width: 100%;
   height: auto;
+  border-radius: 10px; /* Zaoblení okrajů pro lepší vzhled */
 }
 
 /* Sekce */
@@ -45,7 +49,9 @@
 .section h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 1.8rem;
+  font-size: 2rem; /* Zvýšení velikosti pro lepší čitelnost */
+  font-weight: 500;
+  color: #007f73;
 }
 
 /* Responzivita */
